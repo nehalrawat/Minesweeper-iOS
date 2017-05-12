@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Minesweeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a37-oo-k96">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Minesweeper" id="cGZ-rd-3WJ"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7d-2M-NB8">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items/>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moves: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIG-lE-hls">
+                                <rect key="frame" x="20" y="447" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab8-Y6-zS2">
+                                <rect key="frame" x="242" y="447" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TL9-OK-Vuh">
+                                <rect key="frame" x="123" y="473" width="75" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.15269112656394607" blue="0.23906191841096128" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressToStartNewGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="K7T-jn-jdo"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vis-Ix-3b9">
+                                <rect key="frame" x="10" y="104" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.37214880455797433" green="0.058168545644504382" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ZAK-4q-1sf"/>
+                                    <constraint firstAttribute="height" constant="300" id="ddm-Zz-etP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ab8-Y6-zS2" firstAttribute="baseline" secondItem="KIG-lE-hls" secondAttribute="baseline" id="28I-5q-ePp"/>
+                            <constraint firstItem="s7d-2M-NB8" firstAttribute="leading" secondItem="a37-oo-k96" secondAttribute="leading" id="3fg-mP-9Bs"/>
+                            <constraint firstItem="KIG-lE-hls" firstAttribute="top" secondItem="Vis-Ix-3b9" secondAttribute="bottom" constant="43" id="DXv-TI-680"/>
+                            <constraint firstAttribute="trailing" secondItem="s7d-2M-NB8" secondAttribute="trailing" id="Fu2-Tg-JTm"/>
+                            <constraint firstItem="a37-oo-k96" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FzH-Nz-Df4"/>
+                            <constraint firstItem="s7d-2M-NB8" firstAttribute="centerX" secondItem="TL9-OK-Vuh" secondAttribute="centerX" id="LWF-uU-Co5"/>
+                            <constraint firstItem="TL9-OK-Vuh" firstAttribute="centerX" secondItem="Vis-Ix-3b9" secondAttribute="centerX" id="PQ8-pp-Mcf"/>
+                            <constraint firstItem="a37-oo-k96" firstAttribute="trailing" secondItem="s7d-2M-NB8" secondAttribute="trailing" id="WWK-Rh-GCQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ab8-Y6-zS2" secondAttribute="trailing" constant="4" id="ZlT-u5-tsR"/>
+                            <constraint firstItem="s7d-2M-NB8" firstAttribute="top" secondItem="TL9-OK-Vuh" secondAttribute="bottom" constant="21" id="fSJ-Cb-Rrq"/>
+                            <constraint firstItem="s7d-2M-NB8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fda-dm-iAC"/>
+                            <constraint firstItem="KIG-lE-hls" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="jFF-IY-3Wn"/>
+                            <constraint firstItem="s7d-2M-NB8" firstAttribute="top" secondItem="KIG-lE-hls" secondAttribute="bottom" constant="56" id="jvq-1j-7fJ"/>
+                            <constraint firstItem="s7d-2M-NB8" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="rnu-zD-Uu0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="boardView" destination="Vis-Ix-3b9" id="iWc-aU-ciZ"/>
+                        <outlet property="movesLabel" destination="KIG-lE-hls" id="wj1-NV-R6T"/>
+                        <outlet property="timeLabel" destination="ab8-Y6-zS2" id="yBu-EZ-8AT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162.66666666666666" y="344.58666666666664"/>
+        </scene>
+    </scenes>
+</document>
